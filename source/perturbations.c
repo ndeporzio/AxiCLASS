@@ -9498,8 +9498,8 @@ int perturb_derivs(double tau,
       if(pba->scf_evolve_as_fluid == _TRUE_) {
 
         //////////////////////
-        printf("\n %d \t", pba->scf_evolve_as_fluid);  //PRINT 0
-        printf("%e \t", pba->omega_axion); //PRINT 1
+        //printf("\n %d \t", pba->scf_evolve_as_fluid);  //PRINT 0
+        //printf("%e \t", pba->omega_axion); //PRINT 1
         /////////////////////        
 
         tau_b = (pba->Omega0_cdm + pba->Omega0_b + pba->Omega0_scf)*pba->H0*tau/(4*sqrt(pba->Omega0_g+pba->Omega0_ur));
@@ -9512,10 +9512,10 @@ int perturb_derivs(double tau,
               /(pow(a,3)*pow(a_over_ac,3*pba->n_axion/(1+pba->n_axion))+pow(a_over_ac,3/(1+pba->n_axion))*pow(pba->a_c,3))/(1+pba->n_axion);
 
         ////////////////////
-        printf("%e \t", k); //PRINT 2
-        printf("%e \t", a); //PRINT 3
-        printf("%e \t", cs2); //PRINT 4
-        printf("%e \t", ca2); //PRINT 5
+        //printf("%e \t", k); //PRINT 2
+        //printf("%e \t", a); //PRINT 3
+        //printf("%e \t", cs2); //PRINT 4
+        //printf("%e \t", ca2); //PRINT 5
         /////////////////// 
 
 
@@ -9527,7 +9527,7 @@ int perturb_derivs(double tau,
         /** - ----> fluid density */
         // printf("tau %e pba->m_scf %e cs2 %e pba->w_scf %e ca2 %e ca2+7/3 %e \n",tau,pba->m_scf, cs2,pba->w_scf,ca2,ca2+7./3);
         /////////////////
-        printf("%d \t", ppt->use_big_theta_scf); //PRINT 6
+        //printf("%d \t", ppt->use_big_theta_scf); //PRINT 6
         ////////////////
 
         if(ppt->use_big_theta_scf == _TRUE_){
@@ -9538,8 +9538,8 @@ int perturb_derivs(double tau,
             -9.*(cs2-ca2)*a_prime_over_a*a_prime_over_a*y[pv->index_pt_big_theta_scf]/k2;
 
           ////////////////
-          printf("%e \t", y[pv->index_pt_big_theta_scf]); //PRINT 7a
-          printf("%e \t", dy[pv->index_pt_delta_scf]); //PRINT 8a
+          //printf("%e \t", y[pv->index_pt_big_theta_scf]); //PRINT 7a
+          //printf("%e \t", dy[pv->index_pt_delta_scf]); //PRINT 8a
           ///////////////
 
         }
@@ -9550,8 +9550,8 @@ int perturb_derivs(double tau,
             -9.*(1+pvecback[pba->index_bg_w_scf])*(cs2-ca2)*a_prime_over_a*a_prime_over_a*y[pv->index_pt_theta_scf]/k2;
 
           ////////////////
-          printf("%e \t", y[pv->index_pt_theta_scf]); //PRINT 7b
-          printf("%e \t", dy[pv->index_pt_delta_scf]); //PRINT 8b
+          //printf("%e \t", y[pv->index_pt_theta_scf]); //PRINT 7b
+          //printf("%e \t", dy[pv->index_pt_delta_scf]); //PRINT 8b
           ///////////////
 
         }
@@ -9575,9 +9575,9 @@ int perturb_derivs(double tau,
           // }
 
           /////////////////
-          printf("%e \t", y[pv->index_pt_delta_scf]); //PRINT 9a
-          printf("%e \t", dy[pv->index_pt_big_theta_scf]); //PRINT 10a
-          printf("%e \t", k2); //PRINT 11a
+          //printf("%e \t", y[pv->index_pt_delta_scf]); //PRINT 9a
+          //printf("%e \t", dy[pv->index_pt_big_theta_scf]); //PRINT 10a
+          //printf("%e \t", k2); //PRINT 11a
           ////////////////
 
 
@@ -9595,9 +9595,9 @@ int perturb_derivs(double tau,
           // printf("here n %d dy[pv->index_pt_delta_fld+n] %e y[pv->index_pt_delta_fld+n] %e dy[pv->index_pt_theta_fld+n] %e y[pv->index_pt_theta_fld+n] %e \n", n,dy[pv->index_pt_delta_fld+n],y[pv->index_pt_delta_fld+n], dy[pv->index_pt_theta_fld+n],y[pv->index_pt_theta_fld+n]);
 
           /////////////////
-          printf("%e \t", y[pv->index_pt_delta_scf]); //PRINT 9b
-          printf("%e \t", dy[pv->index_pt_theta_scf]); //PRINT 10b
-          printf("%e \t", k2); //PRINT 11b
+          //printf("%e \t", y[pv->index_pt_delta_scf]); //PRINT 9b
+          //printf("%e \t", dy[pv->index_pt_theta_scf]); //PRINT 10b
+          //printf("%e \t", k2); //PRINT 11b
           ////////////////
 
 
@@ -9620,10 +9620,10 @@ int perturb_derivs(double tau,
         fprintf(stdout,"Scf completed.\n ");
         }
 
-      printf("%d \t", ppt->use_big_theta_scf); //PRINT 12
-      printf("%e \t", y[pv->index_pt_delta_scf]); //PRINT 13
-      if(ppt->use_big_theta_scf == _TRUE_){ printf("%e \t", y[pv->index_pt_big_theta_scf]);} //PRINT 14a
-      else{printf("%e \t", y[pv->index_pt_theta_scf]);} //PRINT 14b
+      //printf("%d \t", ppt->use_big_theta_scf); //PRINT 12
+      //printf("%e \t", y[pv->index_pt_delta_scf]); //PRINT 13
+      //if(ppt->use_big_theta_scf == _TRUE_){ printf("%e \t", y[pv->index_pt_big_theta_scf]);} //PRINT 14a
+      //else{printf("%e \t", y[pv->index_pt_theta_scf]);} //PRINT 14b
 
 //      if(ppt->use_big_theta_scf == _TRUE_){
 //        printf("%e \t %e \t %e \t %e \t %e \t %e \t %e \t %d \t %e \t %e \t %e \t %e \n",
